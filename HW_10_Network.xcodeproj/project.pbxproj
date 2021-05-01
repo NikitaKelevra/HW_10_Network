@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84073B78263D973E00EE163F /* LinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84073B77263D973E00EE163F /* LinkModel.swift */; };
 		8446ED50263D278C00813B78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ED4F263D278C00813B78 /* AppDelegate.swift */; };
 		8446ED52263D278C00813B78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ED51263D278C00813B78 /* SceneDelegate.swift */; };
-		8446ED54263D278C00813B78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ED53263D278C00813B78 /* ViewController.swift */; };
 		8446ED57263D278C00813B78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8446ED55263D278C00813B78 /* Main.storyboard */; };
 		8446ED59263D278E00813B78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8446ED58263D278E00813B78 /* Assets.xcassets */; };
 		8446ED5C263D278E00813B78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8446ED5A263D278E00813B78 /* LaunchScreen.storyboard */; };
+		8446ED71263D490300813B78 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ED70263D490300813B78 /* MainViewController.swift */; };
+		8446ED75263D515B00813B78 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ED74263D515B00813B78 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84073B77263D973E00EE163F /* LinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkModel.swift; sourceTree = "<group>"; };
 		8446ED4C263D278C00813B78 /* HW_10_Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW_10_Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8446ED4F263D278C00813B78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8446ED51263D278C00813B78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8446ED53263D278C00813B78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8446ED56263D278C00813B78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8446ED58263D278E00813B78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8446ED5B263D278E00813B78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8446ED5D263D278E00813B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8446ED70263D490300813B78 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8446ED74263D515B00813B78 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		8446ED4E263D278C00813B78 /* HW_10_Network */ = {
 			isa = PBXGroup;
 			children = (
-				8446ED4F263D278C00813B78 /* AppDelegate.swift */,
-				8446ED51263D278C00813B78 /* SceneDelegate.swift */,
-				8446ED53263D278C00813B78 /* ViewController.swift */,
-				8446ED55263D278C00813B78 /* Main.storyboard */,
-				8446ED58263D278E00813B78 /* Assets.xcassets */,
-				8446ED5A263D278E00813B78 /* LaunchScreen.storyboard */,
-				8446ED5D263D278E00813B78 /* Info.plist */,
+				8446ED68263D30A300813B78 /* Storyboards */,
+				8446ED64263D308000813B78 /* ViewControllers */,
+				8446ED67263D309100813B78 /* Models */,
+				8446ED69263D30C000813B78 /* Resources */,
+				8446ED6A263D30CD00813B78 /* Supporting */,
 			);
 			path = HW_10_Network;
+			sourceTree = "<group>";
+		};
+		8446ED64263D308000813B78 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8446ED70263D490300813B78 /* MainViewController.swift */,
+				8446ED74263D515B00813B78 /* ImageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8446ED67263D309100813B78 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84073B77263D973E00EE163F /* LinkModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8446ED68263D30A300813B78 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8446ED55263D278C00813B78 /* Main.storyboard */,
+				8446ED5A263D278E00813B78 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8446ED69263D30C000813B78 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8446ED58263D278E00813B78 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8446ED6A263D30CD00813B78 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				8446ED5D263D278E00813B78 /* Info.plist */,
+				8446ED51263D278C00813B78 /* SceneDelegate.swift */,
+				8446ED4F263D278C00813B78 /* AppDelegate.swift */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8446ED54263D278C00813B78 /* ViewController.swift in Sources */,
+				84073B78263D973E00EE163F /* LinkModel.swift in Sources */,
 				8446ED50263D278C00813B78 /* AppDelegate.swift in Sources */,
 				8446ED52263D278C00813B78 /* SceneDelegate.swift in Sources */,
+				8446ED75263D515B00813B78 /* ImageViewController.swift in Sources */,
+				8446ED71263D490300813B78 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PK5GMP355X;
-				INFOPLIST_FILE = HW_10_Network/Info.plist;
+				INFOPLIST_FILE = HW_10_Network/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PK5GMP355X;
-				INFOPLIST_FILE = HW_10_Network/Info.plist;
+				INFOPLIST_FILE = HW_10_Network/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
