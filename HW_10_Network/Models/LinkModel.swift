@@ -6,33 +6,26 @@
 //
 
 struct Link: Decodable {
-       
-    /*let categories: String
-    let createdAt: String
-    let iconUrl: String
-    let id: String
-    let updatedAt: String
-    let url: String
-    let value: String*/
-    
-    let number: Int
+          
+    let number: String
     let language: String
     let insult: String
     let created: String
-    let shown: Int
+    let shown: String
     let createdby: String
-    let active: Int
+    let active: String
     let comment: String
-
-    
 }
 
 /*
- {"categories":[],
- "created_at":"2020-01-05 13:42:29.569033",
- "icon_url":"https://assets.chucknorris.host/img/avatar/chuck-norris.png",
- "id":"daK4rsXMQYSOyV9r2W-iRw",
- "updated_at":"2020-01-05 13:42:29.569033",
- "url":"https://api.chucknorris.io/jokes/daK4rsXMQYSOyV9r2W-iRw",
- "value":"When Chuck Norris lived in Jamaica in the early 70's, he killed literally hundreds of people with his chucklocks alone."}
+{
+  "number": "123",
+  "language": "en",
+  "insult": "You're a failed abortion whose birth certificate is an apology from the condom factory.",
+  "created": "2018-10-24 06:52:02",
+  "shown": "2688",
+  "createdby": "someone",
+  "active": "1",
+  "comment": "Sourced from some website"
+}
 */

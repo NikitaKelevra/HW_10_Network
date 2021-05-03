@@ -9,7 +9,7 @@ import UIKit
 
 enum URLExamples: String {
     case imageAudiURL = "https://cdn-0.autotk.com/photos/project/4370/19495/origin.jpg"
-    case linkOne = "https://evilinsult.com/generate_insult.php?lang=ru&amp;type=json"
+    case linkOne = "https://evilinsult.com/generate_insult.php?lang=ru&type=json"
 }
 
 class MainViewController: UIViewController {
@@ -18,31 +18,31 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // MARK: - IBOutlets
+    @IBOutlet weak var textView: UITextView!
+    
+    // MARK: - IBActions
     @IBAction func showMeImageAudi() {
         performSegue(withIdentifier: "showImage", sender: nil)
     }
     
     @IBAction func jsonButton() {
-        print("1")
         guard let url = URL(string: URLExamples.linkOne.rawValue) else { return }
-        print("2")
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data, let response = response else {
                 print(error?.localizedDescription ?? "No error description")
-                print("3 error")
                 return
         }
-   
             print(response)
             
             do {
-                print("4 decoder")
-                let course = try JSONDecoder().decode(Link.self, from: data)
-                
-                self.successAlert()
-                print(course)
+                let json = try JSONDecoder().decode(Link.self, from: data)
+                //self.successAlert()
+                print(json)
+                DispatchQueue.main.async {
+                self.textView.text = json.insult
+                }
             } catch let error {
-                print("5 error")
                 self.failedAlert()
                 print(error.localizedDescription)
             }
@@ -50,7 +50,6 @@ class MainViewController: UIViewController {
     }
         
         // MARK: - Private Methods
-    
         private func successAlert() {
             DispatchQueue.main.async {
                 let alert = UIAlertController(
@@ -78,5 +77,4 @@ class MainViewController: UIViewController {
                 self.present(alert, animated: true)
             }
         }
-        
     }

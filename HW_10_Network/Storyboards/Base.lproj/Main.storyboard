@@ -43,7 +43,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="JSON"/>
+                                <state key="normal" title="Evil Insult Generator"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="15"/>
@@ -53,17 +53,33 @@
                                     <action selector="jsonButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="4wu-m8-P82"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qTE-Sc-irs">
+                                <rect key="frame" x="20" y="198" width="280" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="z6M-d3-duq"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
                             <constraint firstItem="PJq-GC-HXu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7by-cM-iCr"/>
                             <constraint firstItem="bmm-a6-aWq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="B6o-K6-xzm"/>
+                            <constraint firstItem="bmm-a6-aWq" firstAttribute="top" secondItem="qTE-Sc-irs" secondAttribute="bottom" constant="20" id="DYP-Uh-Acd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PJq-GC-HXu" secondAttribute="bottom" constant="100" id="Mgo-IQ-LbQ"/>
                             <constraint firstItem="PJq-GC-HXu" firstAttribute="top" secondItem="bmm-a6-aWq" secondAttribute="bottom" constant="50" id="QR1-pr-KoG"/>
+                            <constraint firstItem="qTE-Sc-irs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xdg-g7-tnp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qTE-Sc-irs" secondAttribute="trailing" constant="20" id="bpm-4f-H0y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bmm-a6-aWq" secondAttribute="trailing" constant="50" id="uoY-2g-GbD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="qTE-Sc-irs" id="zMK-1P-ah4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,8 +122,14 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
